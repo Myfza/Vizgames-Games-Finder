@@ -1,28 +1,28 @@
 # 🎮 Vizgames - Games Finder
 
-**Vizgames** adalah aplikasi pencarian dan eksplorasi game yang dibangun dengan integrasi **RAWG API** dan **Supabase**. Pengguna dapat mencari game berdasarkan judul, genre, atau platform, serta menyimpan game favorit mereka ke akun pribadi dengan autentikasi Supabase.
+**Vizgames** is a game search and exploration application built with **RAWG API** and **Supabase** integration. Users can search for games by title, genre, or platform, and save their favorite games to their personal account using Supabase authentication.
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-- 🔍 Pencarian game real-time menggunakan [RAWG Video Games Database API](https://rawg.io/apidocs)
-- 🗃️ Filter berdasarkan genre, platform, dan rating
-- ❤️ Simpan game favorit (authenticated user only)
-- 🕓 Riwayat pencarian game terbaru (recent)
-- 🔐 Login/Register dengan Supabase Auth
-- 📦 Backend database menggunakan Supabase PostgreSQL
+- 🔍 Real-time game search using the [RAWG Video Games Database API](https://rawg.io/apidocs)
+- 🗃️ Filter by genre, platform, and rating
+- ❤️ Save favorite games (authenticated users only)
+- 🕓 Recent search history
+- 🔐 Login/Register with Supabase Auth
+- 📦 Backend database powered by Supabase PostgreSQL
 - ⚡ Built with React + Vite
 
-## 🧰 Teknologi yang Digunakan
+## 🧰 Technologies Used
 
-- ⚛️ **React + Vite** – UI interaktif dan performa tinggi
-- 🌐 **RAWG API** – Sumber data game (title, genre, rating, image, dll)
-- 🐘 **Supabase** – Auth, Realtime, dan penyimpanan game favorit + recent
-- 🧾 **Tailwind CSS** – Styling modern dan responsif
-- ☁️ **Vercel / Netlify** – Untuk deployment (opsional)
+- ⚛️ **React + Vite** – High-performance interactive UI
+- 🌐 **RAWG API** – Game data source (title, genre, rating, image, etc.)
+- 🐘 **Supabase** – Auth, Realtime, and storage for favorites + recent searches
+- 🧾 **Tailwind CSS** – Modern, responsive styling
+- ☁️ **Vercel / Netlify** – For deployment (optional)
 
-## 📦 Instalasi Lokal
+## 📦 Local Installation
 
-1. **Clone repositori:**
+1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/username/Vizgames-Games-Finder.git
@@ -35,13 +35,13 @@ cd Vizgames-Games-Finder
 npm install
 ```
 
-3. **Buat file environment:**
+3. **Create environment file:**
 
 ```bash
 cp .env.example .env
 ```
 
-4. **Isi environment variable:**
+4. **Fill in the environment variables:**
 
 ```env
 VITE_RAWG_API_KEY=your_rawg_api_key
@@ -49,21 +49,21 @@ VITE_SUPABASE_URL=https://xyzcompany.supabase.co
 VITE_SUPABASE_ANON_KEY=your_anon_key
 ```
 
-5. **Jalankan proyek:**
+5. **Run the project:**
 
 ```bash
 npm run dev
 ```
 
-## 🛠️ Struktur Folder
+## 🛠️ Folder Structure
 
 ```
 src/
-├── components/        # Komponen UI
-├── pages/             # Halaman utama (Home, Detail, Auth)
-├── services/          # Supabase dan RAWG API handler
+├── components/        # UI Components
+├── pages/             # Main pages (Home, Detail, Auth)
+├── services/          # Supabase and RAWG API handlers
 ├── utils/             # Helper functions (formatting, auth guards)
-├── assets/            # Logo dan icon
+├── assets/            # Logo and icons
 └── App.jsx            # Root component
 ```
 
@@ -71,17 +71,17 @@ src/
 
 ### RAWG API
 
-- Daftar di [RAWG.io](https://rawg.io/apidocs)
-- Buat API key
-- Masukkan ke dalam file `.env`
+- Register at [RAWG.io](https://rawg.io/apidocs)
+- Generate your API key
+- Add it to the `.env` file
 
 ### Supabase
 
-- Buat project di [Supabase.io](https://app.supabase.com/)
-- Aktifkan fitur **Authentication** (Email/Password)
-- Buat tabel berikut:
+- Create a project on [Supabase.io](https://app.supabase.com/)
+- Enable **Authentication** (Email/Password)
+- Create the following tables:
 
-#### Tabel `favorites`
+#### Table: `favorites`
 ```sql
 create table favorites (
   id uuid primary key default uuid_generate_v4(),
@@ -93,7 +93,7 @@ create table favorites (
 );
 ```
 
-#### Tabel `recent`
+#### Table: `recent`
 ```sql
 create table recent (
   id uuid primary key default uuid_generate_v4(),
@@ -104,22 +104,22 @@ create table recent (
 );
 ```
 
-## 🖼️ Tampilan
+## 🖼️ Screenshots
 
-> 📸 Screenshot akan ditambahkan di versi rilis
+> 📸 Screenshots will be added in the release version
 
-## 📌 Rencana Fitur Selanjutnya
+## 📌 Upcoming Features
 
-- 🔄 Infinite scroll dan loading state
-- 📱 Responsif mobile-first design
+- 🔄 Infinite scroll and loading states
+- 📱 Responsive mobile-first design
 - 🧩 Game recommendation engine
 - 🌙 Dark mode toggle
 
-## 🤝 Kontribusi
+## 🤝 Contributions
 
-Pull request sangat terbuka! Jangan ragu untuk fork dan bantu kembangkan project ini!
+Pull requests are welcome! Feel free to fork and help improve this project!
 
 ## 🧑‍💻 Developer
 
 Made by **Muhammad Yusuf Aditiya (Myfza)**  
-🔗 [GitHub](https://github.com/Myfza) | [Linkedin](https://www.linkedin.com/in/myfza)
+🔗 [GitHub](https://github.com/Myfza) | [LinkedIn](https://www.linkedin.com/in/myfza)
